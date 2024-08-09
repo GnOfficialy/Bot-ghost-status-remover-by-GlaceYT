@@ -17,7 +17,7 @@ const app = express();
 const port = 3000;
 
 // Define status messages and other configurations
-const statusMessages = ["WATCHING OVER WFL", "WATCHING OVER WFL"];
+const statusMessages = ["Playing [WFL]Hub", "Playing [WFL]Hub"];
 let currentIndex = 0;
 const channelId = ''; // Define your channelId here
 
@@ -212,8 +212,8 @@ client.on('interactionCreate', async interaction => {
       interaction.reply({ content: 'Failed to send the free agent announcement. Please check the channel configuration.', ephemeral: true });
     }
   } else if (commandName === 'friendly') {
-    const requiredRoleID = '1270359133521973291'; // Role ID that is allowed to use the command
-    const pingRoleID = '1270359133521973291'; // Role ID to be pinged in the announcement
+    const requiredRoleID = '1270511446660223016'; // Role ID that is allowed to use the command
+    const pingRoleID = '1270511446660223016'; // Role ID to be pinged in the announcement
     const friendlyChannelID = FRIENDLY_CHANNEL_ID;
 
     if (!interaction.member.roles.cache.has(requiredRoleID)) {
@@ -261,7 +261,7 @@ client.on('interactionCreate', async interaction => {
       interaction.reply({ content: 'Failed to send the request. Please check the channel configuration.', ephemeral: true });
     }
   } else if (commandName === 'recommend') {
-    const recommendChannelID = '123456789012345678'; // Define your channel ID here
+    const recommendChannelID = '1269790617492525201'; // Define your channel ID here
     const userToRecommend = options.getUser('user');
     const robloxUser = options.getString('robloxuser');
     const reason = options.getString('reason');
